@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">Scallop</string>
+
+    <!-- CoordinatorLayout Behavior -->
+    <string name="bottom_navigation_view_behavior">io.github.zeleven.scallop.ui.widget.BottomNavigationViewBehavior</string>
+
+    <!-- 底部导航 -->
+    <string name="ganhuo">干货</string>
+    <string name="xiandu">闲读</string>
+    <string name="pictures">图片</string>
+    <string name="more">更多</string>
+    
+    <!-- 首页tab标题 -->
+    <string name="tab_title_all">全部</string>
+    <string name="tab_title_android">Android</string>
+    <string name="tab_title_ios">iOS</string>
+    <string name="tab_title_funny_video">休息视频</string>
+    <string name="tab_title_res">拓展资源</string>
+    <string name="tab_title_front_end">前端</string>
+    <string name="tab_title_random">瞎推荐</string>
+    <string name="tab_title_app">App</string>
+    
+    <string name="fuli">福利</string>
+    <string name="recycler_footer_no_more">真的就这么多了</string>
+
+    <!-- WebView 导航栏菜单 -->
+    <string name="web_view_toolbar_share">分享</string>
+    <string name="web_view_toolbar_refresh">刷新</string>
+    <string name="web_view_toolbar_open_in_browser">浏览器中打开</string>
+
+    <!-- MoreFragment -->
+    <string name="login">登录</string>
+    <string name="settings">设置</string>
+    <string name="about">关于</string>
+    <string name="feedback">问题反馈</string>
+    <string name="dark_mode">夜间模式</string>
 </resources>
