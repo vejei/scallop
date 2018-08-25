@@ -7,9 +7,9 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import io.github.zeleven.scallop.R;
-import io.github.zeleven.scallop.utils.FragmentPagerAdapterItem;
-import io.github.zeleven.scallop.ui.adapter.FragmentPagerAdapter;
+import io.github.zeleven.scallop.ui.adapter.TabViewPagerAdapter;
 import io.github.zeleven.scallop.ui.base.BaseFragment;
+import io.github.zeleven.scallop.utils.TabViewPagerAdapterItem;
 
 public class HomeFragment extends BaseFragment implements HomeContract.View {
     @Inject HomePresenter presenter;
@@ -33,8 +33,8 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
             presenter.attachView(this);
         }
 
-        FragmentPagerAdapter adapter = new FragmentPagerAdapter(getChildFragmentManager(),
-                FragmentPagerAdapterItem.createHomeFragments(getContext()));
+        TabViewPagerAdapter adapter = new TabViewPagerAdapter(getChildFragmentManager(),
+                TabViewPagerAdapterItem.createHomeFragments(getContext()));
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
     }
