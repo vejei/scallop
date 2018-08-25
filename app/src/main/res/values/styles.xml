@@ -5,6 +5,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ScrollViewListItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:foreground">?android:selectableItemBackground</item>
+    </style>
+
     <style name="SearchToolbarTitleText">
         <item name="android:textColor">@color/light_grey_3</item>
         <item name="android:textSize">16sp</item>
