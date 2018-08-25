@@ -24,4 +24,7 @@ public interface GankIOService {
 
     @GET("xiandu/data/id/{cid}/count/" + 20 + "/page/{page}")
     Observable<BaseResponse<XianDu>> getXianDu(@Path("cid") String categoryId, @Path("page") int page);
+
+    @GET("search/query/listview/category/all/count/" + 20 + "/page/{page}")
+    Observable<BaseResponse<GanHuo>> searchGanHuo(@Path("page") int page);
 }

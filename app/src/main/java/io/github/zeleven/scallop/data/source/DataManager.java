@@ -37,4 +37,8 @@ public class DataManager {
     public Observable<BaseResponse<XianDu>> getXianDu(String categoryId, int page) {
         return gankIOService.getXianDu(categoryId, page);
     }
+
+    public Observable<BaseResponse<GanHuo>> searchGanHuo(int page) {
+        return gankIOService.searchGanHuo(page);
+    }
 }
