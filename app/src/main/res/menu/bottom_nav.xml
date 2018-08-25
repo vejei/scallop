@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title="@string/ganhuo"
+        android:icon="@drawable/ic_list"/>
+    <item android:id="@+id/xiandu"
+        android:title="@string/xiandu"
+        android:icon="@drawable/ic_explore"/>
+    <item android:id="@+id/pictures"
+        android:title="@string/pictures"
+        android:icon="@drawable/ic_photo"/>
+    <item android:id="@+id/more"
+        android:title="@string/more"
+        android:icon="@drawable/ic_more_horizontal"/>
+</menu>

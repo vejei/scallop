@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/share"
+        android:title="@string/web_view_toolbar_share"/>
+    <item android:id="@+id/refresh"
+        android:title="@string/web_view_toolbar_refresh"/>
+    <item android:id="@+id/open_in_browser"
+        android:title="@string/web_view_toolbar_open_in_browser"/>
+</menu>
