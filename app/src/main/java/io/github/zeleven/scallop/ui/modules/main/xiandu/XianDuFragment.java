@@ -1,8 +1,8 @@
 package io.github.zeleven.scallop.ui.modules.main.xiandu;
 
+import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -22,6 +22,12 @@ public class XianDuFragment extends BaseFragment implements XianDuContract.View 
     @BindView(R.id.pager) ViewPager viewPager;
 
     @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        fragmentComponent.inject(this);
+    }
+
+    @Override
     public int getLayout() {
         return R.layout.tab_viewpager;
     }
@@ -30,7 +36,6 @@ public class XianDuFragment extends BaseFragment implements XianDuContract.View 
     public void onFragmentViewCreated() {
         super.onFragmentViewCreated();
 
-        fragmentComponent.inject(this);
         if (presenter != null) {
             presenter.attachView(this);
         }
@@ -44,10 +49,5 @@ public class XianDuFragment extends BaseFragment implements XianDuContract.View 
                         TabViewPagerAdapterItem.createXianDuFragments(data));
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
-    }
-
-    @Override
-    public void showError() {
-        Toast.makeText(context, "出错了！", Toast.LENGTH_SHORT).show();
     }
 }
