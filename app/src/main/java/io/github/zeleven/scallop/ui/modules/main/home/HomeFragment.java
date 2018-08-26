@@ -1,5 +1,6 @@
 package io.github.zeleven.scallop.ui.modules.main.home;
 
+import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 
@@ -18,6 +19,12 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
     @BindView(R.id.pager) ViewPager viewPager;
 
     @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        fragmentComponent.inject(this);
+    }
+
+    @Override
     public int getLayout() {
         return R.layout.tab_viewpager;
     }
@@ -25,9 +32,6 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
     @Override
     public void onFragmentViewCreated() {
         super.onFragmentViewCreated();
-
-        // 依赖注入
-        fragmentComponent.inject(this);
 
         if (presenter != null) {
             presenter.attachView(this);
