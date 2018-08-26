@@ -2,11 +2,12 @@ package io.github.zeleven.scallop.ui.base;
 
 import android.support.v7.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class BaseRecyclerViewAdapter<M, VH extends RecyclerView.ViewHolder>
         extends RecyclerView.Adapter<VH> {
-    protected List<M> data;
+    protected List<M> data = new ArrayList<>();
 
     @Override
     public int getItemCount() {
