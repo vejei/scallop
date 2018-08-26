@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/image_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/viewer_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/current_position_tv"
+                android:text="1"
+                style="@style/ImageViewerCounterText"/>
+            <TextView
+                android:text=" / "
+                style="@style/ImageViewerCounterText"/>
+            <TextView
+                android:id="@+id/total_tv"
+                android:text="10"
+                style="@style/ImageViewerCounterText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+            <ImageButton
+                android:id="@+id/share_button"
+                android:src="@drawable/ic_share"
+                android:layout_marginRight="30dp"
+                style="@style/ImageViewerActionButton" />
+
+            <ImageButton
+                android:id="@+id/download_button"
+                android:src="@drawable/ic_file_download"
+                style="@style/ImageViewerActionButton" />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@android:color/white"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone"
+                style="@android:style/Widget.Material.Light.ProgressBar.Small" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
