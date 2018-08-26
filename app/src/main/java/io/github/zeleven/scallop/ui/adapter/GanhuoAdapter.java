@@ -37,7 +37,7 @@ public class GanhuoAdapter extends BaseRecyclerViewAdapter<GanHuo, RecyclerView.
         switch (viewType) {
             case VIEW_TYPE_ITEM:
                 viewHolder = new ItemViewHolder(LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.recycler_item, parent, false));
+                        .inflate(R.layout.ganhuo_list_item, parent, false));
                 break;
             case VIEW_TYPE_LOADING:
                 viewHolder = new FooterViewHolder(LayoutInflater.from(parent.getContext())
@@ -46,7 +46,7 @@ public class GanhuoAdapter extends BaseRecyclerViewAdapter<GanHuo, RecyclerView.
                 break;
             default:
                 viewHolder = new ItemViewHolder(LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.recycler_item, parent, false));
+                        .inflate(R.layout.ganhuo_list_item, parent, false));
                 break;
         }
         return viewHolder;
