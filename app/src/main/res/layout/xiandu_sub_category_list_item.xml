@@ -9,13 +9,11 @@
         android:id="@+id/category_image"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:src="@drawable/material"
         android:scaleType="centerCrop"/>
     <TextView
         android:id="@+id/category_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="好奇心日报"
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="#1a1a1a"
