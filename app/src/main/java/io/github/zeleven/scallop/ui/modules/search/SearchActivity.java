@@ -13,7 +13,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -113,11 +112,6 @@ public class SearchActivity extends BaseActivity implements SearchContract.View 
         recyclerViewScrollListener.resetState();
         resultsRecyclerView.setVisibility(View.GONE);
         noResultLayout.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void showError() {
-        Toast.makeText(this, "出错了！", Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -9,7 +9,6 @@ public interface SearchContract {
     interface View extends BaseContract.View {
         void closeKeyboard();
         void showNoResult();
-        void showError();
         void showResults(List<GanHuo> resultItems, int page);
     }
 

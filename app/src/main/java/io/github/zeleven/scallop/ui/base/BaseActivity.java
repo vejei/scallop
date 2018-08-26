@@ -5,7 +5,9 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -57,5 +59,11 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseCont
         if (appbarLayout != null) {
             appbarLayout.setElevation(enable ? 4.0f : 0.0f);
         }
+    }
+
+    @Override
+    public void showError(String message) {
+        Log.e(getClass().getName(), message);
+        Toast.makeText(this, R.string.toast_message_error_occurred, Toast.LENGTH_SHORT).show();
     }
 }

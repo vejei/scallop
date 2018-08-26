@@ -5,11 +5,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import butterknife.ButterKnife;
+import io.github.zeleven.scallop.R;
 import io.github.zeleven.scallop.Scallop;
 import io.github.zeleven.scallop.di.component.DaggerFragmentComponent;
 import io.github.zeleven.scallop.di.component.FragmentComponent;
@@ -19,18 +22,13 @@ public abstract class BaseFragment extends Fragment implements BaseContract.View
     protected Context context;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.context = context;
         fragmentComponent = DaggerFragmentComponent.builder()
                 .applicationComponent(((Scallop) (getContext().getApplicationContext()))
                         .getApplicationComponent())
                 .build();
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        this.context = context;
     }
 
     @Nullable
@@ -39,10 +37,6 @@ public abstract class BaseFragment extends Fragment implements BaseContract.View
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(getLayout(), container, false);
         ButterKnife.bind(this, view);
-//        fragmentComponent = DaggerFragmentComponent.builder()
-//                .applicationComponent(((Scallop) (getContext().getApplicationContext()))
-//                        .getApplicationComponent())
-//                .build();
         onFragmentViewCreated();
         return view;
     }
@@ -54,5 +48,11 @@ public abstract class BaseFragment extends Fragment implements BaseContract.View
     @Override
     public boolean isNetworkConnected() {
         return false;
+    }
+
+    @Override
+    public void showError(String message) {
+        Log.e(getClass().getName(), message);
+        Toast.makeText(context, R.string.toast_message_error_occurred, Toast.LENGTH_SHORT).show();
     }
 }
