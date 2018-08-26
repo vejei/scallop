@@ -59,7 +59,7 @@ public class XianDuPresenter extends BasePresenter<XianDuContract.View>
 
             @Override
             public void onError(@NonNull Throwable e) {
-                getView().showError();
+                getView().showError(e.getMessage());
             }
 
             @Override

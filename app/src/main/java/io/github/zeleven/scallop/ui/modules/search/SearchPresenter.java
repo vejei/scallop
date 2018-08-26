@@ -62,7 +62,7 @@ public class SearchPresenter extends BasePresenter<SearchContract.View>
             }, new Consumer<Throwable>() {
                 @Override
                 public void accept(Throwable throwable) throws Exception {
-                    getView().showError();
+                    getView().showError(throwable.getMessage());
                 }
             }, new Action() {
                 @Override

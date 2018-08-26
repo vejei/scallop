@@ -55,15 +55,15 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseCont
         return super.onOptionsItemSelected(item);
     }
 
-    public void enableAppBarElevation(boolean enable) {
-        if (appbarLayout != null) {
-            appbarLayout.setElevation(enable ? 4.0f : 0.0f);
-        }
-    }
-
     @Override
     public void showError(String message) {
         Log.e(getClass().getName(), message);
         Toast.makeText(this, R.string.toast_message_error_occurred, Toast.LENGTH_SHORT).show();
+    }
+
+    public void enableAppBarElevation(boolean enable) {
+        if (appbarLayout != null) {
+            appbarLayout.setElevation(enable ? getResources().getDimension(R.dimen.four_dp) : 0.0f);
+        }
     }
 }
