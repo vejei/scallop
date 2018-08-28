@@ -51,7 +51,6 @@
         android:id="@+id/image"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/material"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="10dp"
         android:scaleType="centerCrop"/>
