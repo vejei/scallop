@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Scallop</string>
+
+    <!-- 顶部导航标题 -->
+    <string name="toolbar_title_about">關於</string>
+    <string name="toolbar_title_setting">設置</string>
+
+    <!-- 搜索框 -->
+    <string name="search_box_hint">搜索乾貨</string>
+
+    <!-- 搜索结果页 -->
+    <string name="no_content_found">沒有找到相關的內容</string>
+
+    <!-- 底部导航 -->
+    <string name="ganhuo">乾貨</string>
+    <string name="xiandu">閒讀</string>
+    <string name="pictures">圖片</string>
+    <string name="more">更多</string>
+
+    <!-- 首页tab标题 -->
+    <string name="tab_title_all">全部</string>
+    <string name="tab_title_android">Android</string>
+    <string name="tab_title_ios">iOS</string>
+    <string name="tab_title_funny_video">休息視頻</string>
+    <string name="tab_title_res">拓展資源</string>
+    <string name="tab_title_front_end">前端</string>
+    <string name="tab_title_random">瞎推薦</string>
+    <string name="tab_title_app">App</string>
+
+    <string name="fuli">福利</string>
+    <string name="recycler_footer_no_more">真的就這麽多了</string>
+
+    <!-- WebView 导航栏菜单 -->
+    <string name="web_view_toolbar_share">分享</string>
+    <string name="web_view_toolbar_refresh">刷新</string>
+    <string name="web_view_toolbar_open_in_browser">瀏覽器中打開</string>
+
+    <!-- MoreFragment -->
+    <string name="settings">設置</string>
+    <string name="about">關於</string>
+    <string name="feedback">問題反饋</string>
+    <string name="dark_mode">夜間模式</string>
+
+    <!-- 关于页 -->
+    <string name="card_primary_text">Scallop</string>
+    <string name="project_description">乾貨集中營非官方 Android app, 使用 MVP + Dagger2 + RxJava2 + Retrofit構建，詳細介紹請查看項目主頁（見下方）\n\n有任何問題或發現任何Bug可以到項目主頁提交Issue</string>
+
+    <!-- 设置页 -->
+    <string name="pref_title_language">語言</string>
+    <string name="pref_summary_language">簡體中文</string>
+    <string name="pref_title_clear_cache">清除緩存</string>
+    <string name="pref_summary_clear_cache">圖片緩存</string>
+    <string name="pref_title_app_version">版本號</string>
+    <string name="pref_summary_app_version">1.0 (1)</string>
+    <string name="pref_title_open_source_license">開源協議</string>
+
+    <!-- Toast 消息 -->
+    <string name="toast_message_error_occurred">出錯了！</string>
+
+    <!-- share intent -->
+    <string name="share_dialog_title_share">分享</string>
+    <string name="share_content"> - 來自乾貨集中營的乾貨</string>
+</resources>
