@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    
+    <ListPreference android:key="app_language"
+        android:title="@string/pref_title_language"
+        android:summary="@string/pref_summary_language"
+        android:entries="@array/languages_array"
+        android:entryValues="@array/languages_array_values"
+        android:defaultValue="zh_CN"/>
+    <Preference android:key="clear_cache"
+        android:title="@string/pref_title_clear_cache"
+        android:summary="@string/pref_summary_clear_cache"/>
+    <Preference android:key="app_version"
+        android:title="@string/pref_title_app_version"
+        android:summary="@string/pref_summary_app_version"/>
+    <Preference android:key="library_license"
+        android:title="@string/pref_title_open_source_license"/>
 </PreferenceScreen>
