@@ -1,4 +1,11 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.novoda.build-properties'
+
+buildProperties {
+    secrets {
+        file rootProject.file('secrets.properties')
+    }
+}
 
 android {
     compileSdkVersion 27
@@ -10,6 +17,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigString "MY_EMAIL", (buildProperties.secrets['my_email']).string
     }
     buildTypes {
         release {
