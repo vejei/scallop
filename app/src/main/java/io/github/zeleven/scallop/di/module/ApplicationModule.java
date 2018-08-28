@@ -1,14 +1,15 @@
 package io.github.zeleven.scallop.di.module;
 
 import android.app.Application;
+import android.content.Context;
 
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
 import io.github.zeleven.scallop.Scallop;
-import io.github.zeleven.scallop.data.source.DataManager;
 import io.github.zeleven.scallop.data.source.remote.GankIOService;
+import io.github.zeleven.scallop.di.qualifier.ApplicationContext;
 import io.github.zeleven.scallop.utils.Constants;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -25,6 +26,12 @@ public class ApplicationModule {
     @Provides
     @Singleton
     Application provideApplication() {
+        return application;
+    }
+
+    @Provides
+    @ApplicationContext
+    Context provideContext() {
         return application;
     }
 
