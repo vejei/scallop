@@ -83,9 +83,13 @@ public class MainActivity extends BaseActivity implements MainContract.View {
         });
         bottomNav.setCurrentItem(0);
     }
-
-    @Override
+     @Override
     public int getLayout() {
         return R.layout.activity_main;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return true;
     }
 }
