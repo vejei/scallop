@@ -19,7 +19,7 @@ import java.util.List;
 import butterknife.BindView;
 import io.github.zeleven.scallop.R;
 import io.github.zeleven.scallop.data.model.GanHuo;
-import io.github.zeleven.scallop.ui.modules.webview.WebViewActivity;
+import io.github.zeleven.scallop.ui.modules.browser.WebViewActivity;
 import io.github.zeleven.scallop.ui.base.BaseRecyclerViewAdapter;
 import io.github.zeleven.scallop.ui.base.BaseViewHolder;
 import io.github.zeleven.scallop.utils.StringUtils;
@@ -56,9 +56,6 @@ public class GanhuoAdapter extends BaseRecyclerViewAdapter<GanHuo, RecyclerView.
     public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof ItemViewHolder) {
             ((ItemViewHolder) holder).bind(data.get(position), position);
-        } else if (holder instanceof FooterViewHolder) {
-            ((FooterViewHolder) holder).loadMoreProgressBar.setVisibility(View.VISIBLE);
-            ((FooterViewHolder) holder).noMoreHint.setVisibility(View.GONE);
         }
     }
 
