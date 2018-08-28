@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 import butterknife.BindView;
 import io.github.zeleven.scallop.R;
 import io.github.zeleven.scallop.data.model.XianDu;
-import io.github.zeleven.scallop.ui.modules.webview.WebViewActivity;
+import io.github.zeleven.scallop.ui.modules.browser.WebViewActivity;
 import io.github.zeleven.scallop.ui.base.BaseRecyclerViewAdapter;
 import io.github.zeleven.scallop.ui.base.BaseViewHolder;
 import io.github.zeleven.scallop.utils.StringUtils;
