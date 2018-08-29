@@ -31,7 +31,7 @@ public class WebViewActivity extends BaseActivity {
         title = intent.getStringExtra("TITLE");
 
         toolbar.setNavigationIcon(R.drawable.ic_close_black_24dp);
-        toolbar.setTitle(title != null ? title : "");
+        getSupportActionBar().setTitle(title != null ? title : "");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         webView.getSettings().setJavaScriptEnabled(true);
