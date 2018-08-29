@@ -21,3 +21,20 @@
 * [Dagger 2](https://github.com/google/dagger)
 * [Glide](https://github.com/bumptech/glide)
 * [jsoup](https://github.com/jhy/jsoup/)
+
+## Screenshots
+|启动图|干货列表|干货详情页|
+|:-:|:-:|:-:|
+|![](https://github.com/zeleven/scallop/blob/master/screenshots/launch_screen.png)|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100052.jpg)|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100123.jpg)|
+
+|闲读分类|闲读列表|图片|
+|:-:|:-:|:-:|
+|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100101.jpg)|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-154627.jpg)|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100108.jpg)|
+
+|图片浏览|更多|设置|
+|:-:|:-:|:-:|
+|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100426.jpg)|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100114.jpg)|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100138.jpg)|
+
+|语言设置|搜索1|搜索2|
+|:-:|:-:|:-:|
+|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100142.jpg)|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100155.jpg)|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100202.jpg)|
