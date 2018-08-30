@@ -38,3 +38,9 @@
 |语言设置|搜索1|搜索2|
 |:-:|:-:|:-:|
 |![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100142.jpg)|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100155.jpg)|![](https://github.com/zeleven/scallop/blob/master/screenshots/S80829-100202.jpg)|
+
+## Author
+QQ群：779308363
+
+## License
+MIT协议，详细内容请查看[LICENSE文件](https://github.com/zeleven/scallop/blob/master/LICENSE)
