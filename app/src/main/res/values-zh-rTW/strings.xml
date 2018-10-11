@@ -33,7 +33,9 @@
     <!-- WebView 导航栏菜单 -->
     <string name="web_view_toolbar_share">分享</string>
     <string name="web_view_toolbar_refresh">刷新</string>
+    <string name="web_view_toolbar_copy_link">複製鏈接</string>
     <string name="web_view_toolbar_open_in_browser">瀏覽器中打開</string>
+    <string name="text_copied">已複製到剪貼板</string>
 
     <!-- MoreFragment -->
     <string name="settings">設置</string>

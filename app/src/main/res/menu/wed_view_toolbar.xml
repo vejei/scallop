@@ -4,6 +4,8 @@
         android:title="@string/web_view_toolbar_share"/>
     <item android:id="@+id/refresh"
         android:title="@string/web_view_toolbar_refresh"/>
+    <item android:id="@+id/copy_link"
+        android:title="@string/web_view_toolbar_copy_link"/>
     <item android:id="@+id/open_in_browser"
         android:title="@string/web_view_toolbar_open_in_browser"/>
 </menu>

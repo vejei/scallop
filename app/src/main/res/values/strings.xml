@@ -2,7 +2,7 @@
     <string name="app_name">Scallop</string>
 
     <!-- CoordinatorLayout Behavior -->
-    <string name="bottom_navigation_view_behavior">io.github.zeleven.scallop.ui.widget.BottomNavigationViewBehavior</string>
+    <string name="bottom_navigation_view_behavior" translatable="false">io.github.zeleven.scallop.ui.widget.BottomNavigationViewBehavior</string>
 
     <!-- 顶部导航标题 -->
     <string name="toolbar_title_about">关于</string>
@@ -36,7 +36,9 @@
     <!-- WebView 导航栏菜单 -->
     <string name="web_view_toolbar_share">分享</string>
     <string name="web_view_toolbar_refresh">刷新</string>
+    <string name="web_view_toolbar_copy_link">复制链接</string>
     <string name="web_view_toolbar_open_in_browser">浏览器中打开</string>
+    <string name="text_copied">已复制到剪贴板</string>
 
     <!-- MoreFragment -->
     <string name="settings">设置</string>
