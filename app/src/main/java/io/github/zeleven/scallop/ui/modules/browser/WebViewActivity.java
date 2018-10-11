@@ -1,15 +1,22 @@
 package io.github.zeleven.scallop.ui.modules.browser;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import io.github.zeleven.scallop.R;
@@ -35,15 +42,29 @@ public class WebViewActivity extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         webView.getSettings().setJavaScriptEnabled(true);
+
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                view.loadUrl(request.getUrl().toString());
+                return false;
+            }
+
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                webViewProgressBar.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                webViewProgressBar.setVisibility(View.GONE);
+            }
+        });
+
         webView.setWebChromeClient(new WebChromeClient() {
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
                 webViewProgressBar.setProgress(newProgress);
-                if (newProgress >= 100) {
-                    webViewProgressBar.setVisibility(View.GONE);
-                } else {
-                    webViewProgressBar.setVisibility(View.VISIBLE);
-                }
             }
         });
         webView.loadUrl(url);
@@ -78,6 +99,9 @@ public class WebViewActivity extends BaseActivity {
             case R.id.refresh:
                 webView.reload();
                 break;
+            case R.id.copy_link:
+                copyTextToClipboard();
+                break;
             case R.id.open_in_browser:
                 if (!url.startsWith("http://") && !url.startsWith("https://")) {
                     url = "http://" + url;
@@ -87,5 +111,21 @@ public class WebViewActivity extends BaseActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void copyTextToClipboard() {
+        ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        ClipData clipData = ClipData.newPlainText("link", url);
+        clipboardManager.setPrimaryClip(clipData);
+        Toast.makeText(this, R.string.text_copied, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
+            webView.goBack();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
